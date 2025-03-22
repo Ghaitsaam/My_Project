@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Diri Mahasiswa</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-image: url('images/GEDUNG_ITPLN.jpg');
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            width: 350px;
+            text-align: center;
+        }
+        h2 {
+            color: #488db4;
+            margin-bottom: 20px;
+        }
+        .input-field {
+            margin-bottom: 15px;
+        }
+        .input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 30px;
+            border: 1px solid #ccc;
+            outline: none;
+            font-size: 16px;
+            transition: border 0.3s;
+        }
+        .input:focus {
+            border: 1px solid #488db4;
+        }
+        .submit {
+            padding: 10px;
+            border-radius: 30px;
+            border: none;
+            background-color: #488db4;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        .submit:hover {
+            background-color: #488db4;
+        }
+        .link {
+            margin-top: 15px;
+            color: #999;
+            font-size: 14px;
+        }
+        .link a {
+            color: #488db4;
+            text-decoration: none;
+        }
+        .logo{
+            width: 50px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="images/logo itpln.png" alt="logo" class="logo">
+        <h3>Institut Teknologi PLN</h3><br>
+        <h2>Data Diri Mahasiswa</h2>
+        <div class="input-field">
+            <input type="text" class="input" placeholder="Nama" required>
+        </div>
+        <div class="input-field">
+            <input type="text" class="input" placeholder="NIM" required>
+        </div>
+        <div class="input-field">
+            <select id="jurusan" class="input" required>
+                <option value="">Pilih Jurusan</option>
+                <option value="S1 Teknik Informatika (FTEN)">S1 Teknik Informatika (FTEN)</option>
+                <option value="S1 Sistem Informasi (FTEN)">S1 Sistem Informasi (FTEN)</option>
+                <option value="S1 Teknik Elektro (FKET) ">S1 Teknik Elektro (FKET)</option>
+                <option value="S1 Teknik Tenaga Listrik (FKET) ">S1 Teknik Tenaga Listrik (FKET)</option>
+                <option value="S1 Teknik Sistem Energi (FKET) ">S1 Teknik Sistem Energi (FKET)</option>
+                <option value="S1 Bisnis Energi (FTBE)">S1 Bisnis Energi (FTBE)</option>
+                <option value="S1 Teknik Industri (FTBE)">S1 Teknik Industri (FTBE)</option>
+                <option value="S1 Teknik Mesin (FTBE)">S1 Teknik Mesin (FTBE)</option>
+                <option value="S1 Teknik Sipil (FTIK)">S1 Teknik Sipil (FTIK)</option>
+                <option value="S1 Teknik Lingkungan (FTIK)">S1 Teknik Lingkungan (FTIK)</option>
+                <option value="S1 Geografi (FTIK)">S1 Geografi (FTIK)</option>
+                <option value="D3 Teknologi Listrik (Vokasi)">D3 Teknologi Listrik (Vokasi)</option>
+                <option value="D3 Teknologi Mesin (Vokasi)">D3 Teknologi Mesin (Vokasi)</option>
+            </select>
+        </div>
+        <div class="input-field">
+            <input type="button" class="submit" value="Submit" onclick="window.location.href='https://giphy.com/search/finish'">
+        </div>
+        <div class="link">
+            <p><a href="https://itpln.ac.id/id/">Informasi Lebih Lanjut</a></p>
+        </div>
+    </div>
+</body>
+</html>
