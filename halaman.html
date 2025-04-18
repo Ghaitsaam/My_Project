@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAPORAN TEORI</title>
+    <style>
+        body {
+            font-family: journal;
+            margin: 0;
+            padding: 20px;
+            transition: background-color 0.5s, color 0.5s;
+        }
+        .rapi {
+            background-color: #efd;
+            color: #102b53;
+        }
+        .berantakan {
+            background-color: #781727;
+            color: rgb(143, 37, 5);
+        }
+        @font-face {
+            font-family: journal;
+            src: url(the_journal/THEJOURNALFONT.otf);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        h3 {
+            cursor: pointer;
+            color: #55768c;        }
+        .isi {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        .toggle-button {
+            display: block;
+            margin: 20px auto;
+            border-radius: 30px;
+            padding: 10px 20px;
+            background-color: #7d9fc0;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+    </style>
+</head>
+<body class="rapi">
+    <h1>LAPORAN TEORI</h1>
+    <h2>Ghaitsa Amalia (202332094)</h2>
+
+    <button class="toggle-button" onclick="toggleTheme()">Ganti Tampilan</button>
+
+    <h3 onclick="toggleSection('bagian1')">Bagian 1: Pendahuluan</h3>
+    <div id="bagian1" class="isi">
+        <p>Dalam era digital saat ini, pengembangan web telah menjadi salah satu aspek penting dalam menciptakan pengalaman pengguna yang menarik dan interaktif. Dua teknologi yang sangat berperan dalam pengembangan web adalah CSS (Cascading Style Sheets) dan JavaScript. CSS berfungsi untuk mengatur tampilan dan tata letak halaman web, memungkinkan pengembang untuk menciptakan desain yang responsif dan menarik. Dengan CSS, elemen-elemen di halaman web dapat diatur dalam hal warna, font, ukuran, dan posisi, sehingga memisahkan konten dari presentasi. Di sisi lain, JavaScript memberikan kemampuan untuk memanipulasi Document Object Model (DOM), memungkinkan perubahan konten dan struktur halaman secara dinamis tanpa perlu memuat ulang halaman. Kombinasi antara CSS dan JavaScript tidak hanya meningkatkan estetika situs web, tetapi juga memberikan interaktivitas yang diperlukan untuk meningkatkan pengalaman pengguna.</p>
+    </div>
+
+    <h3 onclick="toggleSection('bagian2')">Bagian 2: Teori Utama</h3>
+    <div id="bagian2" class="isi">
+        <p><a href="LAPORAN02_202332094_GHAITSA AMALIA_SI32A.docx">Teori CSS dan JavaScript</a></p>
+    </div>
+
+    <h3 onclick="toggleSection('bagian3')">Bagian 3: Kesimpulan</h3>
+    <div id="bagian3" class="isi">
+        <p>Secara keseluruhan, CSS dan JavaScript adalah dua pilar utama dalam pengembangan web modern yang saling melengkapi. CSS tidak hanya memperindah tampilan situs web, tetapi juga meningkatkan efisiensi pemeliharaan dengan memisahkan gaya dari konten. Sementara itu, JavaScript memberikan interaktivitas dan kemampuan untuk menangani data secara real-time, yang sangat penting dalam menciptakan aplikasi web yang dinamis. Dengan adanya framework seperti Bootstrap, pengembang dapat dengan mudah menciptakan desain yang responsif dan kompatibel di berbagai perangkat, mempercepat proses pengembangan, dan mengurangi masalah kompatibilitas.</p>
+    </div>
+
+    <script>
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            const userResponse = confirm("Apakah Anda ingin menyembunyikan isi dari bagian ini?");
+            if (userResponse) {
+                section.style.display = section.style.display === 'none' ? 'block' : 'none';
+            }
+        }   
+        function toggleTheme() {
+            const body = document.body;
+            if (body.classList.contains('rapi')) {
+                body.classList.remove('rapi');
+                body.classList.add('berantakan');
+            } else {
+                body.classList.remove('berantakan');
+                body.classList.add('rapi');
+            }
+        }
+    </script>
+</body>
+</html>
